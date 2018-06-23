@@ -76,7 +76,6 @@ cloudinary.config({
 var storage = cloudinaryStorage({
 	cloudinary: cloudinary,
 	folder: '',
-	allowedFormats: ['jpg', 'png','pdf', 'doc', 'jpeg'],
 	filename: function (req, file, cb) {
 		var name=req.uploadfilename;
 		cb(undefined, req.body.uploadfilename);
