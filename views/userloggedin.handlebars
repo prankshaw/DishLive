@@ -16,7 +16,7 @@
 
   <body>
 
-    <nav class="navbar navbar-default">
+    <nav class="navbar navbar-inverse">
       <div class="container">
         <div class="navbar-header">
           <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
@@ -25,7 +25,7 @@
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
           </button>
-          <a class="navbar-brand" href="#">FinalPrep <span class="glyphicon glyphicon-king" aria-hidden="true"></a>
+          <a class="navbar-brand" href="#">DishLive <span class="glyphicon glyphicon-king" aria-hidden="true"></a>
         </div>
         <div id="navbar" class="collapse navbar-collapse">
           <ul class="nav navbar-nav navbar-right">
@@ -41,16 +41,16 @@
       <div class="container">
          <div class="row">
            <div class="col-md-10">
-            <h1><span class="glyphicon glyphicon-cog" aria-hidden="true"></span> Dashboard <small>Grab Your notes</small></h1>
+            <h1><span class="glyphicon glyphicon-cog" aria-hidden="true"></span> Dashboard <small>Start Streaming....</small></h1>
            </div>
            <div class="col-md-2">
              <div class="dropdown create">
                 <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
-                  Add Notes
+                  Add Videos
                  <span class="caret"></span>
                   </button>
                  <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
-                 <li><a type="button-primary" data-toggle="modal" data-target="#addNotes">Add Notes</a></li>
+                 <li><a type="button-primary" data-toggle="modal" data-target="#addNotes">Add Videos</a></li>
                  </ul>
               </div>
 
@@ -75,31 +75,31 @@
 
           <div class="panel panel-default">
               <div class="panel-heading main-color-bg">
-                <h3 class="panel-title">Search Notes</h3>
+                <h3 class="panel-title">Search Videos</h3>
               </div>
               <div class="panel-body">
                 <div class="col-md-3">
                   <div class="well dash-box">
                     <h2><span class="glyphicon glyphicon-list-alt" aria-hidden="true"></span></h2>
-                    <a href="/userloggedin/upload/Semester 1" style="font-size:22px">B.tech sem 1</a>
+                    <a href="/userloggedin/upload/Semester 1" style="font-size:22px">News</a>
                   </div>
                 </div>
                 <div class="col-md-3">
                   <div class="well dash-box">
                     <h2><span class="glyphicon glyphicon-list-alt" aria-hidden="true"></span> </h2>
-                    <a href="/userloggedin/upload/Semester 2" style="font-size:22px">B.tech sem 2</a>
+                    <a href="/userloggedin/upload/Semester 2" style="font-size:22px">Entartainment</a>
                   </div>
                 </div>
                 <div class="col-md-3">
                   <div class="well dash-box">
                     <h2><span class="glyphicon glyphicon-list-alt" aria-hidden="true"></span> </h2>
-                    <a href="/userloggedin/upload/Semester 3" style="font-size:22px">B.tech sem 3</a>
+                    <a href="/userloggedin/upload/Semester 3" style="font-size:22px">Devotional</a>
                   </div>
                 </div>
                 <div class="col-md-3">
                   <div class="well dash-box">
                     <h2><span class="glyphicon glyphicon-list-alt" aria-hidden="true"></span> </h2>
-                    <a href="/userloggedin/upload/Semester 4" style="font-size:22px">B.tech sem 4</a>
+                    <a href="/userloggedin/upload/Semester 4" style="font-size:22px">Sports</a>
                   </div>
                 </div>
               </div>
@@ -118,16 +118,16 @@
                       <span class="caret"></span>
                     </button>
                     <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
-                      <li><a href="/userloggedinbuzzer4%">All Notes</a></li>
-                      <li><a href="/userloggedin/upload/Semester 1">Semester 1</a></li>
-                      <li><a href="/userloggedin/upload/Semester 2">Semester 2</a></li>
-                      <li><a href="/userloggedin/upload/Semester 3">Semester 3</a></li>
-                      <li><a href="/userloggedin/upload/Semester 4">Semester 4(Comming Soon!)</a></li>
+                      <li><a href="/userloggedinbuzzer4%">All Videos</a></li>
+                      <li><a href="/userloggedin/upload/Semester 1">News</a></li>
+                      <li><a href="/userloggedin/upload/Semester 2">Entartainment</a></li>
+                      <li><a href="/userloggedin/upload/Semester 3">Devotional</a></li>
+                      <li><a href="/userloggedin/upload/Semester 4">Sports</a></li>
 
                     </ul>
                   </div>
                   <br>
-                <h1>Uploaded Notes</h1>
+                <h1>Uploaded Videos</h1>
                 {{#if success_msg}}
                   <div class="alert alert-success">{{success_msg}}</div>
                 {{/if}}
@@ -167,7 +167,7 @@
 
 
     <footer id="footer">
-              <p style="color: white">Copyright FINALPREP &copy; 2017</p>
+              <p style="color: white">Copyright DishLive &copy; 2018</p>
           </footer>
 
     <!--add notes-->
@@ -189,15 +189,15 @@
                         <br>
                         <input type="file" name="upload_file" required><br>
                         <select id="Gender" name="Semester" >
-                         <option value="">Select Semester...</option>
+                         <option value="">Select Video...</option>
                          <option value="Semester 1" >
-                         Semester 1</option>
+                         News</option>
                          <option value="Semester 2" >
-                         Semester 2</option>
+                         Entartainment</option>
                          <option value="Semester 3" >
-                         Semester 3</option>
+                         Devotional</option>
                          <option value="Semester 4" >
-                         Semester 4</option>
+                         Sports</option>
                          </select>
                          </label>
                          <br>

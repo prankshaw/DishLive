@@ -78,7 +78,10 @@ cloudinary.config({
 var storage = cloudinaryStorage({
 	cloudinary: cloudinary,
 	folder: '',
-	allowedFormats: ['jpg', 'png','pdf', 'doc', 'jpeg'],
+	format: 'mp4',
+	allowedFormats: ['jpg', 'png','pdf', 'doc', 'jpeg','mp4','gif'],
+	resource_type:'video',
+],
 	filename: function (req, file, cb) {
 		var name=req.uploadfilename;
 		cb(undefined, req.body.uploadfilename);

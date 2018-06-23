@@ -31,7 +31,7 @@ var go = express();
 
 
 //Connect to the database
-mongoose.connect('mongodb://DishLive:DishLive2018@ds115931.mlab.com:15931/dishlive');
+mongoose.connect('mongodb://finalprep:finalpass@ds119302.mlab.com:19302/todo');
 var db = mongoose.connection;
 
 
@@ -76,6 +76,8 @@ cloudinary.config({
 var storage = cloudinaryStorage({
 	cloudinary: cloudinary,
 	folder: '',
+	allowedFormats: ['jpg', 'png','pdf', 'doc', 'jpeg','mp4','gif'],
+	resource_type:'video',
 	filename: function (req, file, cb) {
 		var name=req.uploadfilename;
 		cb(undefined, req.body.uploadfilename);
