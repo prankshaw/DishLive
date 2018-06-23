@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE htmls>
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+	<head>
+		<title>Nudity Detection in videos </title>
+	</head>
+	<body style="font-family:Arial;">
+		<div style="width:500px;position:relative;margin:auto;">
+		<h1>Nudity detection </h1>
+	<!--	<a href="http://www.patrick-wied.at/static/nudejs/" target="_blank" title="Back to the project page">Visit the project page</a><br/><br/> -->
+		<video id="vi" width="500" height="375" loop>
+			<source src="http://res.cloudinary.com/leonardm/video/upload/v1529780559/video3.mp4" type="video/mp4">
+			<source src="http://res.cloudinary.com/leonardm/video/upload/v1529780559/video3.mp4" type="video/ogg">
+			Video element not supported
+		</video>
+		<br/>
+		<input type="button" value="Play" id="playpause"/>&nbsp;&nbsp;<a href="http://res.cloudinary.com/leonardm/video/upload/v1529780559/video3.mp4">Video URL</a>&nbsp;
+		<div style="padding:10px;border:1px solid black;">Console: 
+			<span id="state" style="margin-left:20px;">State</span>
+			<span style="margin-left:40px;">Result</span><span id="result" style="margin-left:20px;">No Nudity</span>
+		</div>
+		</div>
+		<script type="text/javascript" src="nude.js"></script>
+		<script type="text/javascript">window.onload=function(){if(!document.createElement('video').canPlayType){alert("sorry, your browser doesn't support html video tag");}else{var video=document.getElementsByTagName('video')[0],interval,playin=false,playpause=document.getElementById('playpause'),state=document.getElementById('state'),res=document.getElementById('result'),times=0;playpause.onclick=function(e){if(!playin){video.play();interval=setInterval(function(){times++;state.innerHTML="Scan #"+times;nude.load(video);nude.scan(function(result){if(result)
+res.innerHTML="Nudity detected!";else
+res.innerHTML="No nudity";});},5000);playpause.value="Pause";}else{video.pause();clearInterval(interval);playpause.value="Play";}
+playin=!playin;};}};</script>
+<!-- Piwik -->
+<script type="text/javascript">
+  var pkBaseURL = (("https:" == document.location.protocol) ? "file:///C:/Users/pranjal/Desktop/dishathon%20ui/nudejs/tests/nudejs.html" : "file:///C:/Users/pranjal/Desktop/dishathon%20ui/nudejs/tests/nudejs.html");
+  document.write(unescape("%3Cscript src='" + pkBaseURL + "piwik.js' type='text/javascript'%3E%3C/script%3E"));
+</script>
+<script type="text/javascript">
+  try {
+      var piwikTracker = Piwik.getTracker(pkBaseURL + "piwik.php", 1);
+      piwikTracker.trackPageView();
+      piwikTracker.enableLinkTracking();
+  } catch (err) {}
+</script>
+<noscript>
+  <p><img src="http://www.patrick-wied.at/helper/piwik/piwik.php?idsite=1" style="border:0" alt="" pagespeed_url_hash="2131354512" /></p>
+</noscript>
+	<!-- End Piwik Tag -->
+
+	</body>
+</html>
