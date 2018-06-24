@@ -165,8 +165,6 @@ File.find({},function(err,user){
  });
 });
 
-
-
 go.get("/upload/delete/:this",function(req,res){
 	  File.find({uploadfilename : req.params.this.replace(/\-/g,"")}).remove(function(err,data){
 	    if (err)  res.render("admin");
