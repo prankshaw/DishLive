@@ -28,9 +28,9 @@
     "start": "node finalprep.js"
   },
   "keywords": [
-    "finalprep",
+    "DishLive",
     "mayank"
   ],
-  "author": "Mayank",
+  "author": "Coding Junkies",
   "license": "ISC"
 }
