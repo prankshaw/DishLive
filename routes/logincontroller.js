@@ -92,6 +92,10 @@ go.get('/', function(req, res){
 	res.render('home');
 });
 
+// home
+go.get('/analysis', function(req, res){
+	res.render('analysis');
+});
 go.get('/ScanSample', function(req, res){
 	res.render('scan');
 });
