@@ -13,4 +13,4 @@ $ npm start
 
 ### License
 
-(c) Mayank Jha under MIT License.
+(c) MIT License.
